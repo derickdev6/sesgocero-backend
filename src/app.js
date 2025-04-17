@@ -5,7 +5,11 @@ require("dotenv").config();
 const app = express();
 
 // Middlewares
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://sesgocero-web.onrender.com",
+  })
+);
 app.use(express.json());
 
 // Routes
